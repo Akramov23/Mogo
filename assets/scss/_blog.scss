@@ -1,0 +1,144 @@
+#blog {
+
+    .top {
+        @include bg('choqqi.png', $bg-white);
+
+        .clients {
+            justify-content: space-evenly;
+            padding: 3rem 0 2rem;
+            flex-wrap: wrap;
+            display: flex;
+            
+            .client {
+                padding-bottom: 7rem;
+                display: flex;
+                width: 50%;
+                
+                @media(max-width: 900px) {
+                    width: 40rem;
+                }
+                
+                @media(max-width: 500px) {
+                    flex-direction: column;
+                    text-align: center;
+
+                    img {
+                        margin: 0 auto 2rem;
+                    }
+                }
+
+                img {
+                    min-height: 6.875rem;
+                    max-height: 6.875rem;
+                    max-width: 6.875rem;
+                    min-width: 6.875rem;
+                    border-radius: 50%;
+                    object-fit: cover;
+                }
+
+                div {
+                    font-size: .9rem;
+                    padding: 0 2rem;
+                
+                    h2 {
+                        color: $color-secondary;
+                        padding-bottom: 0.7rem;
+                        font-family: 'Trueno';
+                        font-size: 0.9rem;
+                        font-weight: 400;
+                    }
+
+                    i {
+                        color: $color-secondary;
+                        font-weight: 300;
+                        display: block;
+                    }
+
+                    .line {
+                        margin: 1.3rem 0;
+                    }
+
+                    p {
+                        word-spacing: .03rem;
+                        line-height: 1.5rem;
+                    }
+                }
+            }
+        }
+    }
+
+    .bottom .cards {
+        justify-content: center;
+        margin-bottom: 6rem;
+        flex-wrap: wrap;
+        display: flex;
+        
+        .card {
+            width: 22.83rem;
+            margin: .75rem;
+
+            .img {
+                @extend %bg-center;
+                position: relative;
+                height: 15rem;
+
+                .calendar {
+                    background-color: $color-sky;
+                    text-align: center;
+                    position: absolute;
+                    min-width: 3.75rem;
+                    padding: .7rem;
+                    color: #fff;
+                    bottom: .6rem;
+                    left: -.6rem;
+
+                    h3 {
+                        font-family: 'Trueno';
+                        font-size: 1.8rem;
+                    }
+
+                    i {
+                        font-size: 0.9rem;
+                    }
+                }
+            }
+            
+            .text {
+                padding: 1rem 0 2.5rem;
+                font-size: 0.9rem;
+                
+                h2 {
+                    color: $color-secondary;
+                    padding-bottom: 0.7rem;
+                    font-family: 'Trueno';
+                    font-size: 0.9rem;
+                    font-weight: 400;
+                }
+
+                p {
+                    line-height: 1.4rem;
+                }
+
+                div {
+                    align-items: center;
+                    display: flex;
+
+                    img {
+                        margin-right: .3rem;
+                        width: 1.35rem;
+
+                        &:last-of-type {
+                            width: 1.05rem;
+                        }
+                    }
+
+                    i {
+                        color: $color-secondary;
+                        font-family: 'Trueno';
+                        margin-right: 1.3rem;
+                    }
+                }
+            }
+        }
+    }
+}

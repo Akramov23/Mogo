@@ -1,0 +1,9 @@
+#contact {
+    @include bg('xarita.png', $bg-white);
+    background-position: bottom;
+    display: block;
+
+    .title {
+        color: $color-red;
+    }
+}

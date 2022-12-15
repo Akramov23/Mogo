@@ -1,0 +1,135 @@
+#main-header {
+    background-image: $bg-nav;
+    font-family: 'Trueno';
+    position: fixed;
+    color: #fff;
+    width: 100%;
+    z-index: 2;
+
+    .nav-desktop {
+        justify-content: space-between;
+        align-items: center;
+        padding: 1rem 0;
+        display: flex;
+
+        .logo {
+            font-size: 1.875rem;
+            font-weight: 600;
+            transition: .25s;
+
+            &:hover {
+                text-shadow:0 0 .4rem $color-yellow;
+                color: $color-yellow;
+            }
+        }
+
+        .links {
+            display: flex;
+
+            li {
+                margin-left: 3.5rem;
+                font-size: .9rem;
+                
+                a {
+                    transition: .25s;
+                    padding: 1rem 0;
+                    display: block;
+
+                    &:hover {
+                        box-shadow: 0 .2rem 0 -.03rem $color-yellow;
+                        filter: drop-shadow(0 0 .2rem $color-yellow);
+                        color: $color-yellow;
+                    }
+                }
+
+                
+            }
+        }
+    }
+
+    .nav-phone {
+        justify-content: space-between;
+        align-items: center;
+        padding: 1rem 0;
+        display: none;
+        color: #fff;
+
+        .logo {
+            font-size: 1.5rem;
+            font-weight: 600;
+            transition: .25s;
+
+            &:hover {
+                text-shadow:0 0 .4rem $color-yellow;
+                color: $color-yellow;
+            }
+        }
+
+        label {
+            display: inline-block;
+            padding-right: 1rem;
+            cursor: pointer;
+
+            &:hover {
+                text-shadow: 0 0 .2rem $color-yellow;
+                color: $color-yellow;
+            }
+        }
+
+        input {
+            display: none;
+        }
+
+        input:checked + .links {
+            width: 200px;
+            opacity: 1;
+        }
+
+        .links {
+            background-image: $bg-links;
+            transition: .4s ease;
+            position: absolute;
+            padding-top: 20px;
+            overflow: hidden;
+            height: 100vh;
+            opacity: .3;
+            width: 0;
+            right: 0;
+            top: 0;
+
+            label {
+                margin-left: 2rem;
+                transition: .25s;
+
+                
+            }
+
+            li {
+                padding: .5rem 1.2rem;
+                font-size: .9rem;
+                text-align: right;
+
+                a {
+                    transition: .25s;
+                    padding: .5rem 0;
+                    display: block;
+
+                    &:hover {
+                        box-shadow: 0 .2rem 0 -.03rem $color-yellow;
+                        filter: drop-shadow(0 0 .2rem $color-yellow);
+                        color: $color-yellow;
+                    }
+                }
+            }
+        }
+    }
+
+    @media(max-width: 700px) {
+        .nav-desktop {
+            display: none;
+        }
+        .nav-phone {
+            display: flex;
+        }
+    }
+}

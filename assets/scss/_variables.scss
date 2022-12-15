@@ -1,0 +1,40 @@
+$color-primary: #999;
+$color-secondary: #333;
+$color-red: #f38181;
+$color-yellow: #fce38a;
+$color-sky: #95e1d3;
+$color-gray: #f8f8f8;
+
+$bg-white: linear-gradient(#fffc, #fffc);
+$bg-links: linear-gradient(to left, #f38181, transparent);
+$bg-primary: linear-gradient(#f38181dd, #fce38add);
+$bg-nav: linear-gradient(#f38181, transparent);
+
+$border-primary: 1px solid #e5e5e5;
+
+%line {
+    background-color: $color-red;
+    vertical-align: middle;
+    display: inline-block;
+    height: .14rem;
+    width: 3.75rem;
+}
+
+%p {
+    font-family: "Roboto";
+    color: $color-primary;
+    word-spacing: .03rem;
+    font-size: .9375rem;
+    line-height: 1.5rem;
+}
+
+%bg-center {
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+}
+
+@mixin bg($rasm, $rang: null) {
+    background-image: $rang, url('../img/' + $rasm);
+    @extend %bg-center;
+}

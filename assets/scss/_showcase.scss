@@ -1,0 +1,95 @@
+#showcase {
+    @include bg('kalxat.png', $bg-primary);
+    justify-content: space-between;
+    flex-direction: column;
+    font-family: 'Trueno';
+    min-height: 100vh;
+    display: flex;
+    color: #fff;
+
+    .title {
+        padding-top: 25vh;
+        color: #fff;
+
+        h3 {
+            font-size: 1.7em;
+        }
+        
+        h2 {
+            line-height: .95em;
+            font-size: 3.5em;
+            max-width: 30rem;
+            padding: 1rem 0;
+            margin: auto;
+        }
+    
+        span {
+            background-color: #fff;
+            margin: 1rem auto;
+        }
+    
+        a {
+            border: .125rem solid #fff;
+            font-size: .75rem;
+            margin: 1rem auto;
+            transition: .25s;
+            font-weight: 700;
+            padding: .4rem;
+            display: block;
+            width: 8.5rem;
+
+            &:hover {
+                border-color: $color-yellow;
+                color: $color-yellow;
+            }
+        }
+    }
+
+    .body {
+        justify-content: space-between;
+        transition: .25s;
+        display: flex;
+        width: 100%;
+
+        .wrap {
+            padding-bottom: .5em;
+            display: flex;
+            width: 100%;
+    
+            &:first-child .rank:first-child div {
+                background-image: linear-gradient(to right, $color-red 20%, #fff 20%);
+            }
+
+            .rank {
+                flex-direction: column;
+                margin: 0 .75rem;
+                display: flex;
+                width: 100%;
+
+                div {
+                    background-color: #fff;
+                    height: .135rem;
+                    width: 100%;
+                }
+    
+                p {
+                    white-space: nowrap;
+                    padding: 1em 0;
+    
+                    b {
+                        font-size: 1.2em;
+                    }
+    
+                    small {
+                        font-weight: 300;
+                    }
+                }
+            }
+        }
+
+        @media(max-width: 555px) {
+            flex-direction: column;
+            font-size: 0.8rem;
+        }
+    }
+}

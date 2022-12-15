@@ -1,0 +1,173 @@
+#work {
+
+    .cards {
+        justify-content: center;
+        margin: 3rem auto 7rem;
+        flex-wrap: wrap;
+        display: flex;
+        
+        .card {
+            flex-direction: column;
+            width: 22.83rem;
+            margin: .75rem;
+
+            .top {
+                background-color: $color-sky;
+                height: 29.375rem;
+                color: #fff;
+                
+                &:hover {
+                    .wrap {
+                        transform: translate(-.625rem, -.625rem);
+        
+                        .bg {
+                            opacity: 1;
+    
+                            a {
+                                transform: initial;
+                                opacity: 1;
+                            }
+                        }
+                    }
+                }
+                
+                .wrap {
+                    @extend %bg-center;
+                    transition: .25s;
+                    height: 100%;
+                    
+                    .bg {
+                        background-image: $bg-primary;
+                        justify-content: center;
+                        align-items: center;
+                        transition: .3s;
+                        display: flex;
+                        height: 100%;
+                        opacity: 0;
+    
+                        a {
+                            background-color: $color-yellow;
+                            transform: scale(0);
+                            transition: .3s;
+                            height: 3.6rem;
+                            width: 3.6rem;
+                            display: flex;
+                            opacity: 0;
+    
+                            &:not(:last-child) {
+                                border-right: 1px solid $color-red;
+                            }
+    
+                            &:hover {
+                                background-color: $color-red;
+    
+                                svg {
+                                    color: #fff;
+                                }
+                            }
+    
+                            svg {
+                                color: $color-red;
+                                transition: .3s;
+                                width: 1.5rem;
+                                margin: auto;
+                            }
+                        }
+                    }
+                }
+            }
+            
+            .bottom {
+                padding: 1rem 0 2.5rem;
+                text-align: center;
+                
+                h2 {
+                    color: $color-secondary;
+                    padding-bottom: 0.7rem;
+                    font-family: 'Trueno';
+                    font-size: 0.9rem;
+                    font-weight: 400;
+                }
+
+                i {
+                    font-size: 0.9rem;
+                    font-weight: 300;
+                    display: block;
+                }
+            }
+        }
+    }
+
+    .logos {
+        background-color: $color-gray;
+        padding: 4rem 0;
+
+        img {
+            width: 100%;
+        }
+    }
+
+    .gallery {
+        background-image: linear-gradient(to right, transparent, $color-gray 12%, $color-gray 88%, transparent);
+        
+        .bg {
+            margin: 4rem auto;
+            max-width: 1366px;
+            flex-wrap: wrap;
+            display: flex;
+        }
+        
+        .wrap {
+            flex-direction: column;
+            height: 35rem;
+            display: flex;
+            width: 25%;
+
+            @media(max-width: 1050px) {
+                width: 50%;
+            }
+
+            @media(max-width: 520px) {
+                width: 100%;
+            }
+
+            a {
+                @extend %bg-center;
+                height: 100%;
+
+                &:hover div {
+                    height: 100%;
+                    opacity: 1;
+                }
+
+                div {
+                    background-image: $bg-primary;
+                    justify-content: center;
+                    flex-direction: column;
+                    align-items: center;
+                    text-align: center;
+                    font-size: .9rem;
+                    overflow: hidden;
+                    transition: .4s;
+                    display: flex;
+                    color: #fff;
+                    opacity: 0;
+                    height: 0;
+
+                    img {
+                        width: 1.8rem;
+                    }
+
+                    p {
+                        padding: 1.4rem 0 .7rem;
+                    }
+                }
+            }
+        }
+    }
+
+    .carousel img {
+        border-radius: 50%;
+        object-fit: cover;
+    }
+}

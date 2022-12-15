@@ -1,0 +1,144 @@
+/* utils */
+
+.container {
+  padding-right: 1rem;
+  padding-left: 1rem;
+  margin-right: auto;
+  margin-left: auto;
+  max-width: 75rem;
+}
+
+.line {
+  @extend %line;
+}
+
+.title {
+  color: $color-secondary;
+  padding: 5rem 1rem 2rem;
+  padding-bottom: 2rem;
+  text-align: center;
+  padding-top: 5rem;
+  font-size: 1.5rem;
+  transition: .25s;
+  width: 100%;
+  
+  h3 {
+    font-family: "Kaushan";
+    font-weight: normal;
+    font-size: 1em;
+  }
+  
+  h2 {
+    font-family: 'Trueno';
+    margin-top: .5rem;
+    font-size: 1.25em;
+  }
+  
+  span {
+    margin: 2.2rem 0;
+    transition: .25s;
+    @extend %line;
+  }
+
+  p {
+    max-width: 60rem;
+    margin: auto;
+    @extend %p;
+  }
+
+}
+
+@media(max-width: 800px) {
+  %line {
+    width: 2.8rem;
+  }
+
+  .title {
+    padding-top: 3rem;
+    font-size: .94rem;
+    
+    span {
+      margin-top: 1.5rem;
+    }
+  }
+}
+
+.carousel .owl-carousel {
+
+  .item {
+    align-items: center;
+    padding: 3rem 7rem;
+    display: flex;
+
+    img {
+      height: 10rem;
+      width: 10rem;
+    }
+
+    div {
+      padding-left: 3rem;
+
+      p {
+        padding-right: 1rem;
+        margin-bottom: 1rem;
+        max-height: 6.5rem;
+        font-style: italic;
+        font-size: 1.25rem;
+        line-height: 2rem;
+        overflow: auto;
+      }
+
+      span {
+        color: $color-secondary;
+        font-family: 'Kaushan';
+        vertical-align: middle;
+        display: inline-block;
+        padding-left: .6rem;
+        font-size: 1.35rem;
+      }
+    }
+
+    @media(max-width: 1000px) {
+      padding: 1.5rem 3.5rem;
+
+      img {
+        height: 7rem;
+        width: 7rem;
+      }
+
+      div p {
+        line-height: 1.6rem;
+        font-size: 1rem;
+      }
+    }
+  }
+
+  @media(max-width: 500px) {
+    display: none;
+  }
+
+  .owl-dots {
+    display: none;
+  }
+  
+  .owl-nav {
+    .owl-prev, .owl-next {
+      transform: translateY(-50%);
+      position: absolute;
+      font-size: 3.5rem;
+      transition: .25s;
+      color: #ccc;
+      top: 50%;
+  
+      &:hover {
+        background-color: transparent;
+        color: inherit;
+      }
+    }
+  
+    .owl-prev {left: 0;}
+    .owl-next {right: 0;}
+  }
+}
+
+/* utils end */
